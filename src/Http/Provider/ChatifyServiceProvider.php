@@ -16,8 +16,8 @@ class ChatifyServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../../../config/config.php' => config_path('chatifyconfig.php')
-        ], 'chatifyconfig-config');
+            __DIR__ . '/../../../config/config.php' => config_path('jazerchatifyconfig.php')
+        ], 'jazerchatifyconfig-config');
         
         $this->loadRoutesFrom( __DIR__ . '/../../../routes/api.php');
 
