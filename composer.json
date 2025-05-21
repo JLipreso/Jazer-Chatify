@@ -1,0 +1,26 @@
+{
+    "name": "jazer/chatify",
+    "description": "Jazer package to handle chatify API request",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jazer\\Chatify\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers": [
+                "Jazer\\Chatify\\Http\\Provider\\ChatifyServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Jazer Tech Solution"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {}
+}

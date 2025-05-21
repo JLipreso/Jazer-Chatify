@@ -1,0 +1,7 @@
+Installation:
+
+composer require jazer/chatify:dev-main
+php artisan vendor:publish --tag=chatifyconfig-config
+
+chatify/XXX
+
