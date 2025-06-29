@@ -16,11 +16,11 @@ class ChatifyServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../../../config/config.php' => config_path('jazerchatifyconfig.php')
-        ], 'jazerchatifyconfig-config');
+            __DIR__ . '/../../../config/config.php' => config_path('jtchatifyconfig.php')
+        ], 'jtchatifyconfig-config');
         
         $this->loadRoutesFrom( __DIR__ . '/../../../routes/api.php');
 
-        config(['database.connections.conn_chatify' => config('chatify.database_connection')]);
+        config(['database.connections.conn_chatify' => config('jtchatifyconfig.database_connection')]);
     }
 }
