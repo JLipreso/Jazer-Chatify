@@ -1,0 +1,8 @@
+{
+    "text":"Hi this is a sample image",
+    "path": [
+        "path-to-image-1/image.png",
+        "path-to-image-2/image.png",
+        "path-to-image-3/image.png"
+    ]
+}
