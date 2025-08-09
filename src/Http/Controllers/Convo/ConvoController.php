@@ -34,9 +34,9 @@ class ConvoController extends Controller
 
             if ($inserted) {
                 return response()->json([
-                    'success' => true,
-                    'message' => 'Conversation created successfully',
-                    'convo_refid' => $convoRefId
+                    'success'       => true,
+                    'message'       => 'Conversation created successfully',
+                    'convo_refid'   => $convo_refid
                 ], 201);
             } else {
                 return response()->json([
