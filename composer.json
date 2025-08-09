@@ -22,5 +22,7 @@
     ],
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "require": {}
+    "require": {
+        "pusher/pusher-php-server": "^7.2"
+    }
 }

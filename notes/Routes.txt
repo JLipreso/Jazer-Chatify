@@ -3,5 +3,11 @@ Installation:
 composer require jazer/chatify:dev-main
 php artisan vendor:publish --tag=jazerchatifyconfig-config
 
-chatify/XXX
+Send Message
+    chatify/message/send?message=Hello from Laravel! 345&user=Jason
 
+
+
+
+Development Route:
+http://cross-system-laravel-modular.test/api/chatify/message/send?project_refid=PRJ-001-8UDF-FRG&message=Hello from Laravel! 345&user_refid=USR-0005-GHYT5&convo_refid=CNV-003-7UTGD-034
