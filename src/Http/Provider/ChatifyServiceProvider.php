@@ -9,7 +9,7 @@ class ChatifyServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../../config/database.php', 'chatify'  
+            __DIR__ . '/../../../config/database.php', 'jtchatifyconfig'  
         );
     }
 
