@@ -201,8 +201,6 @@ class MessageController extends Controller
     {
         try {
             $perPage = $request->input('per_page', config('jtchatifyconfig.fetch_paginate_max', 25));
-            $orderBy = $request->input('order_by', 'created_at');
-            $orderDirection = $request->input('order_direction', 'ASC');
 
             $messages = DB::connection("conn_chatify")->table("chatify_messages")
                 ->select([
@@ -219,7 +217,7 @@ class MessageController extends Controller
                     'project_refid' => config('jtchatifyconfig.project_refid'),
                     'convo_refid' => $convo_refid
                 ])
-                ->orderBy($orderBy, $orderDirection)
+                ->orderBy('dataid', 'desc')
                 ->paginate($perPage);
 
             return response()->json([
@@ -285,8 +283,8 @@ class MessageController extends Controller
             $message = DB::connection("conn_chatify")->table("chatify_messages")
                 ->select('pinned')
                 ->where([
-                    'dataid' => $messageId,
-                    'project_refid' => config('jtchatifyconfig.project_refid')
+                    'dataid'            => $messageId,
+                    'project_refid'     => config('jtchatifyconfig.project_refid')
                 ])
                 ->first();
 
