@@ -55,7 +55,7 @@ class ConvoController extends Controller
     /**
      * Update an existing conversation
      */
-    public function updateConvo(Request $request, $convo_refid)
+    public function updateConvo(Request $request, $convo_refid, $dataid)
     {
         try {
             $updateData = [];
@@ -80,7 +80,8 @@ class ConvoController extends Controller
             $updated = DB::connection("conn_chatify")->table("chatify_convo")
                 ->where([
                     'project_refid' => config('jtchatifyconfig.project_refid'),
-                    'convo_refid' => $convo_refid
+                    'convo_refid'   => $convo_refid,
+                    'dataid'        => $dataid
                 ])
                 ->update($updateData);
 
